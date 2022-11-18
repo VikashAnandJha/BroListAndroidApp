@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22527030749",
+    "project_id": "brolistapp",
+    "storage_bucket": "brolistapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22527030749:android:b37d1066c6f70291053234",
+        "android_client_info": {
+          "package_name": "com.example.brolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22527030749-n8m80lehs58739bjq4ueapao9v0pqmjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbnibuNi1QMfzvdXZvMec4dkcZwWCZruA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22527030749-n8m80lehs58739bjq4ueapao9v0pqmjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
