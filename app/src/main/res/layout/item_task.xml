@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="5dp"
-    android:layout_height="match_parent">
+    android:layout_margin="1dp"
+    android:layout_height="wrap_content">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,14 +31,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Task item name"
+                    android:text="sample name"
                     android:textSize="25dp"
+                    android:id="@+id/taskNameTv"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PENDING"
+                    android:text="status"
                     android:textSize="10dp"
+                    android:id="@+id/taskStatusTv"
                     />
             </LinearLayout>
         </LinearLayout>
