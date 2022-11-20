@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.brolist.model.TaskModel;
 
@@ -34,6 +36,15 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         taskRv.setLayoutManager(layoutManager);
         taskRv.setAdapter(taskListAdapter);
+
+
+        findViewById(R.id.addTaskFAB).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,AddTaskActivity.class));
+            }
+        });
+
 
 
 
