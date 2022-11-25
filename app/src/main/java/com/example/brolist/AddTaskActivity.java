@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.brolist.model.TaskModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -45,7 +46,7 @@ public class AddTaskActivity extends AppCompatActivity {
                 if(taskName!=null)
                 {
                     findViewById(R.id.progress).setVisibility(View.VISIBLE);
-                    TaskModel taskModel=new TaskModel("",taskName,"PENDING");
+                    TaskModel taskModel=new TaskModel("",taskName,"PENDING", FirebaseAuth.getInstance().getUid());
                     db.collection("tasks").add(taskModel).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {

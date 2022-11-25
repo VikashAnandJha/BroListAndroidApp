@@ -2,13 +2,26 @@ package com.example.brolist.model;
 
 public class TaskModel {
 
-    String taskId,taskName,taskStatus;
+    String taskId,taskName,taskStatus,userId;
 
 
-    public TaskModel(String taskId, String taskName, String taskStatus) {
+    public TaskModel(){
+
+    }
+
+    public TaskModel(String taskId, String taskName, String taskStatus,String userId) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.taskStatus = taskStatus;
+        this.userId = userId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getTaskId() {
