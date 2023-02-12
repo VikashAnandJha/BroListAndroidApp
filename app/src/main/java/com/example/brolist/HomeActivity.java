@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -39,7 +41,10 @@ public class HomeActivity extends AppCompatActivity {
     TextView userNameTv;
     CircleImageView userImageIv;
     SearchView searchView;
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +57,16 @@ public class HomeActivity extends AppCompatActivity {
         userNameTv=findViewById(R.id.userNameTv);
         userImageIv=findViewById(R.id.userProfileIv);
         searchView=findViewById(R.id.searchview);
+
+
+
+        userImageIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this,SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         userNameTv.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
